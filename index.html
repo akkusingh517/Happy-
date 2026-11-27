@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Birthday Invitation | Akash</title>
@@ -80,7 +101,6 @@
                     Exclusive VIP Invitation
                 </div>
 
-                <!-- Share Invite Button -->
                 <button type="button" id="shareInviteBtn" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 text-xs font-bold tracking-wider uppercase shadow-lg shadow-amber-500/20 transition-all cursor-pointer active:scale-95">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
@@ -89,7 +109,6 @@
                 </button>
             </div>
 
-            <!-- Featured Portrait Card -->
             <div class="relative mb-8 group">
                 <div class="absolute -inset-1.5 bg-gradient-to-tr from-red-600 via-amber-500 to-red-800 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
                 <div class="relative w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-zinc-950 bg-red-900 shadow-2xl">
@@ -115,7 +134,6 @@
                 Join us for an unforgettable evening of celebration, music, and great company as we toast to another milestone year.
             </p>
 
-            <!-- Live Countdown Timer to June 5th, 8:00 PM -->
             <div class="w-full max-w-lg mb-4">
                 <p id="countdownLabel" class="text-xs uppercase tracking-[0.2em] text-zinc-400 mb-3">Countdown to June 5th Celebration</p>
                 <div id="countdown" class="grid grid-cols-4 gap-3 md:gap-4 bg-zinc-900/70 p-4 rounded-2xl backdrop-blur-md border border-zinc-800/90 animate-pulse-gold">
@@ -139,51 +157,34 @@
             </div>
         </header>
 
-        <!-- Event Details Section -->
         <section class="w-full max-w-4xl mt-14">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Date Card -->
                 <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800 hover:border-amber-500/40 transition-colors rounded-2xl p-6 text-center flex flex-col items-center justify-center">
                     <div class="w-12 h-12 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                     </div>
                     <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-1">The Date</h3>
                     <p class="font-serif text-xl font-bold text-white">5th June</p>
                     <p class="text-xs text-amber-400 mt-1">Born 05 &bull; 06 &bull; 1998</p>
                 </div>
-
-                <!-- Time Card -->
                 <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800 hover:border-red-500/40 transition-colors rounded-2xl p-6 text-center flex flex-col items-center justify-center">
                     <div class="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
                     <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-1">The Time</h3>
                     <p class="font-serif text-xl font-bold text-white">8:00 PM Onwards</p>
                     <p class="text-xs text-zinc-400 mt-1">Dinner, Music & Cocktails</p>
                 </div>
-
-                <!-- Venue Card -->
                 <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800 hover:border-amber-500/40 transition-colors rounded-2xl p-6 text-center flex flex-col items-center justify-center">
                     <div class="w-12 h-12 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
                     <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-1">The Venue</h3>
                     <p class="font-serif text-lg font-bold text-white">PCHP+9QX</p>
-                    <p class="text-xs text-zinc-300 mt-1 leading-relaxed">
-                        Uttarkashi, Uttarakhand
-                    </p>
+                    <p class="text-xs text-zinc-300 mt-1 leading-relaxed">Uttarkashi, Uttarakhand</p>
                     <p id="locationStatus" class="text-[11px] text-amber-400/90 mt-1.5 min-h-[16px]"></p>
                     <a href="https://maps.app.goo.gl/ziDKQytRdx2UZWSR6?g_st=an" target="_blank" rel="noopener noreferrer" id="liveLocationBtn" class="mt-2 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-400 text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
                         Get Directions
                     </a>
                 </div>
@@ -199,224 +200,142 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- VIP 1: Vikash Shah -->
+                <!-- VIP 1: Vikash Shah WITH IMAGE -->
                 <div class="relative overflow-hidden bg-gradient-to-b from-zinc-900/90 to-zinc-950 border border-amber-500/40 rounded-2xl p-6 text-center shadow-xl shadow-amber-500/5 group hover:-translate-y-1 transition-all duration-300">
                     <div class="absolute inset-0 vip-shimmer pointer-events-none"></div>
-                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4 relative z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         VIP Pass #001
                     </div>
-                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-3">
-                        <div class="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center font-serif text-xl font-bold text-amber-400">
-                            VS
+                    <div class="relative z-10 w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-4 shadow-lg shadow-amber-500/20">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-zinc-950">
+                            <img 
+                                src="https://drive.google.com/thumbnail?id=1u7BXurDbBBCXkU61EvQ9TCO4c45gFI_W&sz=w600"
+                                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1u7BXurDbBBCXkU61EvQ9TCO4c45gFI_W=s600';"
+                                alt="Vikash Shah"
+                                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                            >
                         </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-white tracking-wide">Vikash Shah</h3>
-                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1">Distinguished VIP Guest</p>
+                    <h3 class="font-serif text-xl font-bold text-white tracking-wide relative z-10">Vikash Shah</h3>
+                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1 relative z-10">Distinguished VIP Guest</p>
                 </div>
 
-                <!-- VIP 2: Aditya Shah -->
+                <!-- VIP 2: Aditya Shah WITH IMAGE -->
                 <div class="relative overflow-hidden bg-gradient-to-b from-zinc-900/90 to-zinc-950 border border-amber-500/40 rounded-2xl p-6 text-center shadow-xl shadow-amber-500/5 group hover:-translate-y-1 transition-all duration-300">
                     <div class="absolute inset-0 vip-shimmer pointer-events-none"></div>
-                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4 relative z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         VIP Pass #002
                     </div>
-                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-3">
-                        <div class="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center font-serif text-xl font-bold text-amber-400">
-                            AS
+                    <div class="relative z-10 w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-4 shadow-lg shadow-amber-500/20">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-zinc-950">
+                            <img 
+                                src="https://drive.google.com/thumbnail?id=1p-V26jdy77O_iTa4ecZsfV7Xfyk_T_WB&sz=w600"
+                                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1p-V26jdy77O_iTa4ecZsfV7Xfyk_T_WB=s600';"
+                                alt="Aditya Shah"
+                                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                            >
                         </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-white tracking-wide">Aditya Shah</h3>
-                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1">Distinguished VIP Guest</p>
+                    <h3 class="font-serif text-xl font-bold text-white tracking-wide relative z-10">Aditya Shah</h3>
+                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1 relative z-10">Distinguished VIP Guest</p>
                 </div>
 
                 <!-- VIP 3: Kuldeep Shah -->
                 <div class="relative overflow-hidden bg-gradient-to-b from-zinc-900/90 to-zinc-950 border border-amber-500/40 rounded-2xl p-6 text-center shadow-xl shadow-amber-500/5 group hover:-translate-y-1 transition-all duration-300">
                     <div class="absolute inset-0 vip-shimmer pointer-events-none"></div>
-                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-4 relative z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         VIP Pass #003
                     </div>
-                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-3">
-                        <div class="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center font-serif text-xl font-bold text-amber-400">
-                            KS
-                        </div>
+                    <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-tr from-amber-500 to-red-600 p-0.5 mb-3 relative z-10">
+                        <div class="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center font-serif text-xl font-bold text-amber-400">KS</div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-white tracking-wide">Kuldeep Shah</h3>
-                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1">Distinguished VIP Guest</p>
+                    <h3 class="font-serif text-xl font-bold text-white tracking-wide relative z-10">Kuldeep Shah</h3>
+                    <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1 relative z-10">Distinguished VIP Guest</p>
                 </div>
             </div>
         </section>
 
-        <!-- Direct WhatsApp RSVP & Birthday Wishes Board -->
         <section class="w-full max-w-4xl mb-16">
             <div class="bg-zinc-900/60 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 md:p-10 shadow-2xl">
                 <div class="text-center mb-8">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Instant WhatsApp Confirmation</span>
                     <h2 class="font-serif text-3xl font-bold text-white mt-1">RSVP & Birthday Wishes</h2>
                 </div>
-
                 <form id="wishForm" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <input type="text" id="senderName" required placeholder="Your Full Name" class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 transition-colors">
-                        </div>
-                        <div>
-                            <select id="rsvpStatus" class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
-                                <option value="Joyfully Attending">Joyfully Attending</option>
-                                <option value="Attending with a Guest (+1)">Attending with a Guest (+1)</option>
-                                <option value="Can't Make It — Sending Wishes">Can't Make It — Sending Wishes</option>
-                            </select>
-                        </div>
+                        <div><input type="text" id="senderName" required placeholder="Your Full Name" class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 transition-colors"></div>
+                        <div><select id="rsvpStatus" class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors"><option value="Yes, I'll be there!">Yes, I'll be there!</option><option value="Maybe">Maybe</option><option value="Can't make it">Can't make it</option></select></div>
                     </div>
-                    <div>
-                        <textarea id="senderMessage" required rows="3" placeholder="Write a personal birthday message for Akash..." class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 transition-colors resize-none"></textarea>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <button type="submit" class="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-zinc-950 font-bold uppercase tracking-wider text-sm py-4 px-6 rounded-xl shadow-lg shadow-amber-500/20 transition-all cursor-pointer active:scale-[0.99]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                            </svg>
-                            Send RSVP via WhatsApp
-                        </button>
-                        <button type="button" id="shareInviteFooterBtn" class="w-full flex items-center justify-center gap-2.5 bg-zinc-950 hover:bg-zinc-900 border border-amber-500/40 text-amber-400 font-bold uppercase tracking-wider text-sm py-4 px-6 rounded-xl transition-all cursor-pointer active:scale-[0.99]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-                            </svg>
-                            Share VIP Invitation
-                        </button>
-                    </div>
+                    <textarea id="wishMessage" rows="4" placeholder="Write your birthday wish..." class="w-full bg-zinc-950/90 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-red-600 text-zinc-950 font-bold uppercase tracking-widest hover:from-amber-400 hover:to-red-500 transition-all">Send via WhatsApp</button>
                 </form>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="w-full max-w-4xl text-center text-zinc-600 text-xs pb-6 border-t border-zinc-900 pt-6">
-            <p class="tracking-widest uppercase">VIP Celebration &bull; Akash's Birthday &bull; Uttarkashi</p>
+        <footer class="w-full max-w-4xl text-center py-8 border-t border-zinc-800/50">
+            <p class="text-xs tracking-[0.2em] uppercase text-zinc-500">Made with ❤️ for Akash's Special Day • 05.06.1998</p>
         </footer>
     </div>
 
-    <!-- Interactive Scripts -->
     <script>
-        const VENUE_MAPS_URL = "https://maps.app.goo.gl/ziDKQytRdx2UZWSR6?g_st=an";
-
-        // 1. Live Countdown Timer to June 5th at 8:00 PM
-        function updateCountdown() {
+        // Countdown to June 5th 8PM next occurrence
+        function getTargetDate() {
             const now = new Date();
-            let targetYear = now.getFullYear();
-            // June is month index 5 (0-based), 20:00:00 = 8:00 PM
-            let targetDate = new Date(targetYear, 5, 5, 20, 0, 0);
-
-            // If June 5th 8:00 PM of the current year has passed, target next year
-            if (now > targetDate) {
-                targetDate = new Date(targetYear + 1, 5, 5, 20, 0, 0);
-            }
-
-            const diff = targetDate - now;
-            const labelEl = document.getElementById('countdownLabel');
-            if (labelEl) {
-                labelEl.textContent = `Countdown to June 5th, ${targetDate.getFullYear()} Celebration`;
-            }
-
-            if (diff <= 0) {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / 1000 / 60) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
-
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            let year = now.getFullYear();
+            let target = new Date(year, 5, 5, 20, 0, 0); // June is month 5
+            if (now > target) target = new Date(year + 1, 5, 5, 20, 0, 0);
+            return target;
         }
-        updateCountdown();
+        function updateCountdown() {
+            const target = getTargetDate();
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) return;
+            const days = Math.floor(diff / (1000*60*60*24));
+            const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+            const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+            const secs = Math.floor((diff % (1000*60)) / 1000);
+            document.getElementById('days').textContent = String(days).padStart(2,'0');
+            document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+            document.getElementById('minutes').textContent = String(mins).padStart(2,'0');
+            document.getElementById('seconds').textContent = String(secs).padStart(2,'0');
+        }
         setInterval(updateCountdown, 1000);
+        updateCountdown();
 
-        // 2. Share Invite Functionality (Web Share API + Clipboard/WhatsApp Fallback)
-        async function shareInvitation() {
-            const shareTitle = "VIP Birthday Invitation | Akash";
-            const shareText = `🎉 You are cordially invited to Akash's VIP Birthday Celebration!\n📅 Date: 5th June\n🕗 Time: 8:00 PM Onwards\n📍 Venue: PCHP+9QX, Uttarkashi, Uttarakhand\n🗺️ Location: ${VENUE_MAPS_URL}`;
-            const shareUrl = window.location.href;
-
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: shareTitle,
-                        text: shareText,
-                        url: shareUrl
-                    });
-                    return;
-                } catch (err) {
-                    if (err.name === 'AbortError') return;
-                }
-            }
-
-            // Fallback: Copy invite details & open WhatsApp share
-            const fullMessage = `${shareText}\n🔗 Invite: ${shareUrl}`;
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                try {
-                    await navigator.clipboard.writeText(fullMessage);
-                    const btnText = document.getElementById('shareBtnText');
-                    if (btnText) {
-                        btnText.textContent = 'Invite Copied!';
-                        setTimeout(() => { btnText.textContent = 'Share Invite'; }, 2500);
-                    }
-                } catch (e) {}
-            }
-            window.open(`https://wa.me/?text=${encodeURIComponent(fullMessage)}`, '_blank');
+        // Particles
+        const particlesEl = document.getElementById('particles');
+        for(let i=0;i<18;i++){
+            const d=document.createElement('div');
+            d.className='absolute w-1 h-1 bg-amber-400/30 rounded-full animate-float';
+            d.style.left=Math.random()*100+'%';
+            d.style.top=Math.random()*100+'%';
+            d.style.animationDelay=(Math.random()*6)+'s';
+            d.style.animationDuration=(4+Math.random()*4)+'s';
+            particlesEl.appendChild(d);
         }
 
-        document.getElementById('shareInviteBtn').addEventListener('click', shareInvitation);
-        document.getElementById('shareInviteFooterBtn').addEventListener('click', shareInvitation);
-
-        // 3. Get Directions Status Feedback on Redirect Click
-        document.getElementById('liveLocationBtn').addEventListener('click', () => {
-            const statusEl = document.getElementById('locationStatus');
-            statusEl.textContent = 'Opening Google Maps...';
-            setTimeout(() => { statusEl.textContent = ''; }, 3000);
+        // Share
+        document.getElementById('shareInviteBtn')?.addEventListener('click', async () => {
+            const shareData = { title: "Akash's Birthday VIP Invite", text: "You are invited to Akash's Birthday - 5th June 8PM", url: window.location.href };
+            try {
+                if (navigator.share) await navigator.share(shareData);
+                else { await navigator.clipboard.writeText(window.location.href); document.getElementById('shareBtnText').textContent='Link Copied!'; setTimeout(()=>document.getElementById('shareBtnText').textContent='Share Invite',2000); }
+            } catch(e){}
         });
 
-        // 4. WhatsApp RSVP Form Submission
-        document.getElementById('wishForm').addEventListener('submit', (e) => {
+        // WhatsApp RSVP
+        document.getElementById('wishForm')?.addEventListener('submit', (e)=>{
             e.preventDefault();
-            const name = document.getElementById('senderName').value.trim();
-            const status = document.getElementById('rsvpStatus').value;
-            const message = document.getElementById('senderMessage').value.trim();
-
-            const whatsappText = `*VIP Birthday RSVP — Akash's Birthday*\n\n*Name:* ${name}\n*Status:* ${status}\n*Message:* ${message}`;
-            window.open(`https://wa.me/?text=${encodeURIComponent(whatsappText)}`, '_blank');
+            const name=document.getElementById('senderName').value;
+            const rsvp=document.getElementById('rsvpStatus').value;
+            const wish=document.getElementById('wishMessage').value;
+            const msg=`Hi Akash! 🎉%0A%0AI'm ${encodeURIComponent(name)}%0ARSVP: ${encodeURIComponent(rsvp)}%0AWish: ${encodeURIComponent(wish)}%0A%0ASee you on 5th June!`;
+            window.open(`https://wa.me/?text=${msg}`,'_blank');
         });
-
-        // 5. Ambient Gold Particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 18; i++) {
-            const particle = document.createElement('div');
-            const size = Math.random() * 4 + 2;
-            particle.className = 'absolute rounded-full bg-amber-400/20 animate-float';
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}%`;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.animationDelay = `${Math.random() * 5}s`;
-            particle.style.animationDuration = `${Math.random() * 4 + 5}s`;
-            particlesContainer.appendChild(particle);
-        }
     </script>
-</body>
-</html>
-dy>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
